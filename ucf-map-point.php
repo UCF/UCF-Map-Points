@@ -19,10 +19,12 @@ define( 'UCF_MAP_POINT__JS_URL', UCF_MAP_POINT__STATIC_URL . '/js' );
 define( 'UCF_MAP_POINT__TEXT_DOMAIN', 'ucf_map_point' );
 
 include_once 'includes/ucf-map-point-post-type.php';
+include_once 'includes/ucf-map-point-type-taxonomy.php';
 
 if ( ! function_exists( 'ucf_map_point_on_activation' ) ) {
 	function ucf_map_point_on_activation() {
 		UCF_Map_Point_Post_Type::register_post_type();
+		UCF_Map_Point_Type_Taxonomy::register_taxonomy();
 		flush_rewrite_rules();
 	}
 
@@ -40,6 +42,7 @@ if ( ! function_exists( 'ucf_map_point_on_deactivation' ) ) {
 if ( ! function_exists( 'ucf_map_point_init' ) ) {
 	function ucf_map_point_init() {
 		add_action( 'init', array( 'UCF_Map_Point_Post_Type', 'register_post_type' ), 10, 0 );
+		add_action( 'init', array( 'UCF_Map_Point_Type_Taxonomy', 'register_taxonomy' ), 10, 0 );
 	}
 
 	add_action( 'plugins_loaded', 'ucf_map_point_init', 10, 0 );
