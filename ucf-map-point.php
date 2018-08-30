@@ -16,6 +16,7 @@ define( 'UCF_MAP_POINT__PLUGIN_FILE', __FILE__ );
 define( 'UCF_MAP_POINT__STATIC_URL', plugins_url( 'static' ) );
 define( 'UCF_MAP_POINT__CSS_URL', UCF_MAP_POINT__STATIC_URL . '/css' );
 define( 'UCF_MAP_POINT__JS_URL', UCF_MAP_POINT__STATIC_URL . '/js' );
+define( 'UCF_MAP_POINT__TEXT_DOMAIN', 'ucf_map_point' );
 
 include_once 'includes/ucf-map-point-post-type.php';
 
