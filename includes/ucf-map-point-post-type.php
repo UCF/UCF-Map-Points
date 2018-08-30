@@ -103,7 +103,7 @@ if ( ! class_exists( 'UCF_Map_Point_Post_Type' ) ) {
 			$retval = array();
 
 			$valid_taxonomies = array(
-				'map_point_type'
+
 			);
 
 			$valid_taxonomies = apply_filters( 'ucf_map_point_taxonomies', $valid_taxonomies );
